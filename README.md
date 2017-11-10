@@ -57,10 +57,13 @@ Linha 28 a 40: Lembra do Fingerprint que pedi pra anotar na etapa 10? Atualize e
 
 Linha 42 a 44: Por último, e não menos importante, temos o deploy. Nesse trecho do arquivo nós fazemos o que é instruído no Painel de Controle da Umbler para deploy via git. Mas com um detalhe: Deve ser utilizado a URL SSH, e não HTTPS. Na linha 44 atualize a URL SSH com a URL que é informada no Painel de Controle da Umbler.com.
 
-Lembrando que muitas outras etapas podem ser configuradas, e os processos abaixo podem ser otimizados. Esse é apenas um exemplo funcional... 
+Lembrando que muitas outras etapas podem ser configuradas, e os processos acima podem ser otimizados. Esse é apenas um exemplo funcional. 
 
-Se tudo der certo e vc tiver fé, estamos prontos para realizar um teste. Assim que vc realizar esses ajustes, der um commit e push para o github, um novo build será iniciado no Circle CI.  
+Se tudo der certo e vc tiver fé, estamos prontos para realizar um teste. Assim que vc realizar esses ajustes, der um commit e push para o github, um novo build será iniciado no Circle CI. 
 
-Com esse config.yml o CircleCI vai realizar um git clone, npm install, npm run test e, se tudo der "verde", um git push para a Umbler.
+Com esse config.yml o CircleCI vai realizar um git clone, npm install, npm run test e, se tudo der "verde", um git push para a Umbler. 
+
+Veja um exemplo de build executado com sucesso:
+![](docs/circleci-log.png)
 
 Boa sorte! 
