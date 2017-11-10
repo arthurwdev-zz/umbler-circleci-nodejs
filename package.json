@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-demo",
+  "version": "1.0.0",
+  "description": "Demo NodeJs com build, testes e deploy automatizado na Umbler",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurwdev/umbler-circleci-nodejs.git"
+  },
+  "author": {
+    "name": "Arthur Oliveira de Souza",
+    "url": "https://arthuroliveira.me",
+    "email": "contato@arthuroliveira.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arthurwdev/umbler-circleci-nodejs/issues"
+  },
+  "homepage": "https://github.com/arthurwdev/umbler-circleci-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

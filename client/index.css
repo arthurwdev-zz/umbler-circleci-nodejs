@@ -1,0 +1,30 @@
+body {
+    background-color: #222222;
+}
+
+#fullframe {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    margin: -120px auto 0 -130px;
+    /* value of top margin: height of the image divide by 2 (ie: 240 / 2), value of left margin: width of the image divide by 2 (ie: 260 / 2) */
+    width: 260px;
+    /* same as the image width */
+}
+
+#fullframe span img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#fullframe span p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-size: 22pt;
+    display: block;
+    margin: 0 auto;
+}
