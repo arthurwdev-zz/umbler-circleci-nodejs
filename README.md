@@ -1,6 +1,13 @@
 # Sobre o Projeto
 Essa é uma demonstração de como configurar CI/CD utilizando o Circle CI para build, teste e deploy automático via GIT em um site NodejS na Umbler.com.
 
+Mas você deve pensar: O que eu ganho com isso já que posso realizar o deploy diretamente via git na Umbler?  
+Utilizando uma ferramenta de CI/CD você pode configurar um pipeline que inclua procedimentos de build, teste, lint e qualquer outra etapa necessária antes de realizar o deploy. Além disso, você não precisa compartilhar a senha ou chave SSH da Umbler com outras pessoas envolvidas no dev.
+
+Outra vantagem interessante é que o pipeline pode ser configurado para agir de formas diferentes dependendo da branch, por exemplo. Assim vc pode realizar build e testes na branch ```develop``` e apenas publicar a ```master``` por exemplo.
+
+Nesse exemplo vamos utilizar o CircleCI por causa da franquia no plano gratuito. Enquanto escrevo essas instruções, o plano gratuito permite um único job (sem concorrência) e 1500 minutos de build por mês. Se usar com moderação, é o bastante pra vários projetos. 
+
 ## Requisitos
 - [X] Site NodeJs no Umbler.com
 - [X] Conta gratuita no circleci.com
