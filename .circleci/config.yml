@@ -1,44 +1,16 @@
 version: 2
-general:
-  branches:
-    only:
-      - master
 jobs:
   build:
     docker:
-      - image: circleci/node:8.9.0
-
-    working_directory: ~/repo
+      - image: debian:stretch
 
     steps:
       - checkout
 
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+      - run:
+          name: Greeting
+          command: echo Hello, world.
 
       - run:
-          name: Install Packages (npm install)
-          command: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run:
-          name: Run tests (npm test)
-          command: npm test
-
-      - run:
-          name: Avoid hosts unknown
-          command: echo -e "Host tatooine.deploy.umbler.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-
-      - add_ssh_keys:
-          fingerprints:
-            - "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00"
-
-      - run:
-          name: Deploy to Umbler
-          command: git remote add umbler ssh://git@tatooine.deploy.umbler.com:9999/00000000/demonode.arthuroliveira-me.git && git push umbler master
+          name: Print the Current Time
+          command: date
